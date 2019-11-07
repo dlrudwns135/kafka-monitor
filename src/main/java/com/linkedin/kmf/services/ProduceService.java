@@ -322,7 +322,7 @@ public class ProduceService implements Service {
     }
 
     public void run() {
-      try {
+      /*try {
         long nextIndex = _nextIndexPerPartition.get(_partition).get();
         long currMs = System.currentTimeMillis();
         String message = Utils.jsonFromFields(_topic, nextIndex, currMs, _producerId, _recordSize);
@@ -343,7 +343,7 @@ public class ProduceService implements Service {
         _sensors._produceErrorPerPartition.get(_partition).record();
         _sensors._produceErrorInLastSendPerPartition.put(_partition, true);
         LOG.warn(_name + " failed to send message", e);
-      }
+      }*/
     }
   }
 
